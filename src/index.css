@@ -13,7 +13,6 @@ code {
 }
 
 
-
 /* Wheel component styling */
 #wheel-container{
   height: 40%;
@@ -117,28 +116,6 @@ code {
   position: relative;
 }
 
-#coverflow-img{
-  width: 90%;
-  height: 80%;
-  margin-left: 5px;
-  margin-top: 25px;
-}
-
-#settings-img{
-  margin-left: 25%;
-  margin-top: 40%;
-  position: absolute;
-}
-/* #rotatable-menu-area{
-  width: 80%;
-  height: 80%;
-  position: relative;
-  top: 9%;
-  margin: auto;
-  background-color: white;
-  border-radius: 50%;
-} */
-
 #menu-btn{
     position: absolute;
     top: 15px;
@@ -180,8 +157,100 @@ code {
   bottom: 15px;
 }
 
+/* 1. CoverFlow Component */
 
-/*Game Screen */
+#coverflow-section{
+  position: relative;
+  width: 100%;
+  top: 2.5%;
+  height: 95%;
+}
+
+#coverflow-img{
+  position: absolute;
+  width: 75%;
+  height: 50%;
+  top: 22%;
+  margin-left: 10%;
+  background-image: url(https://image.flaticon.com/icons/png/256/5089/5089144.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+#coverflow-title{
+  position: absolute;
+  font-size: 1.4rem;
+}
+
+/* 2. Music Component */
+
+/* 2.1 All Songs Screen */
+#all-songs-container{
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+#all-songs-container>div{
+  padding: 20px;
+  width: 50px;
+  margin: 30px 3px;
+  height: 50px;
+  background-position: center;
+  background-size: cover;
+}
+#song1{
+  background-image: url(./resources/all-songs-img-1.jpeg);
+}
+#song2{
+  background-image: url(./resources/all-songs-img-2.jpeg);
+}
+#song3{
+  background-image: url(./resources/all-songs-img-3.jpeg);
+}
+#song4{
+  background-image: url(./resources/all-songs-img-4.jpeg);
+}
+/* 2.2 Artists Screen */
+
+#artists-section,#album-section{
+height: 100% ;
+width: 100%;
+position: relative;
+}
+#artists-cover{
+background-image: url(./resources/Memories.jpg); 
+background-position: center;
+width: 90%;
+margin-left: 5%;
+height: 50%;
+position: absolute;
+top: 10%;
+background-size: cover;
+}
+#artists-song,#album-song{
+position: absolute;
+width: 90%;
+bottom: 10%;
+margin-left: 2%;
+}
+
+/* 2.3 Album Screen */
+
+#album-cover{
+  background-image: url(./resources/baarish.jpg); 
+  background-position: top;
+  width: 90%;
+  margin-left: 5%;
+  height: 50%;
+  position: absolute;
+  top: 10%;
+  background-size: cover;
+  }
+
+
+/* 3.Game Component */
 #gameGif{
   width: 100%;
   margin-top: 15px;
@@ -189,6 +258,14 @@ code {
   border-radius: inherit;
 }
 
+/* 4. Settings Component */
+#settings-img{
+  margin-left: 25%;
+  margin-top: 40%;
+  position: absolute;
+}
+
+/* KeyFrames */
 /* Infinite rotating */
 @keyframes rotating {
   from {
@@ -202,8 +279,39 @@ code {
   animation: rotating 8s linear infinite alternate;
 }
 
-
-
+/* Infinite scaleUpDown */
+@keyframes scaleUp {
+    0%   {transform: scale(1.2);}
+    25%  {transform: scale(1);}
+    50%  {transform: scale(1.1);}
+    75%  {transform: scale(1);}
+    100% {transform: scale(1.3);}
+}
+.scaleUp {
+  animation: scaleUp 1s linear infinite alternate;
+}
+/* Infinite TextColorChange */
+@keyframes changeTextColor {
+  0%   {color: yellow;}
+  25%  {color: yellowgreen;}
+  50%  {color: green;}
+  75%  {color: orange;}
+  100% {color: red;}
+}
+.changeTextColor {
+animation: changeTextColor 1s linear infinite alternate;
+}
+/* Infinite BgColorChange */
+@keyframes changeBgColor {
+  0%   {background-color: #858519c7;}
+  25%  {background-color: #9acd32b8;}
+  50%  {background-color: #008000ab;}
+  75%  {background-color: #ffa500a6;}
+  100% {background-color: #ff000066;}
+}
+.changeBgColor {
+animation: changeBgColor 1s linear infinite alternate;
+}
 
 /* Media Queries for responsiveness*/
 

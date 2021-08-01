@@ -18,7 +18,7 @@ class App extends React.Component{
       selected : 0,
       isOnMusicPanel:false,
       screenPanel : -1,
-      songs_menu:['All Songs','Artists','Albumns']
+      songs_menu:['All Songs','Artists','Albums']
     }
   }
   componentDidMount(){

@@ -5,7 +5,12 @@ class AllSongs extends React.Component{
     render(){
         return(
             <div className="menuItem">
-                <h1>All Songs</h1>
+               <div id="all-songs-container">
+                   <div id ="song1"></div>
+                   <div id ="song2"></div>
+                   <div id ="song3"></div>
+                   <div id ="song4"></div>
+               </div>
             </div>
         );
     }
