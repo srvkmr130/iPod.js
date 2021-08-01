@@ -1,0 +1,234 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+
+/* Wheel component styling */
+#wheel-container{
+  height: 40%;
+  width: 65%;
+  border: 1px solid grey;
+  margin: auto;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  margin-top: 5%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(221, 221, 221);
+  transition: transform ease-in-out 0.2s;
+}
+
+#inner-area{
+  width:50%;
+  height: 50%;
+  outline: none;
+  background-color: rgb(90, 90, 90);
+	border-radius: inherit;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	border: none;
+}
+
+
+
+/* Screen Component Styling */
+
+.main-container{
+  width: 25%;
+  height: 90vh;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 2%;
+  border-radius: 10%;
+  padding-bottom:15px;
+  box-shadow: inset 0px 0px 20px 4px darkgrey;
+  border: 2px solid #4e454d73;
+  background: linear-gradient(357deg, #ab8989, #846c6c00);
+}
+
+#menu{
+  width:60%;
+  height: 90%;
+  margin-top: -8px;
+  border-radius: 10%;
+  background: #8071719e;
+}
+
+#item>div>h4{
+  padding-left: 6px;
+}
+.padding-2px{
+  padding: 0 5px;
+}
+#brand-title>h2{
+  text-align: center;
+  padding-top: 5px;
+  color: #26304c;
+}
+
+.display-none{
+  display: none;
+}
+#screen-container{
+    background-image: url('./resources/main-cover.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    border-radius: 12% 12% 0 0;
+    box-shadow: 0px -1px 19px 4px #775858;
+    height:60%;
+    margin: 15px;
+}
+
+.selected
+{
+  background: linear-gradient(
+    357deg
+    , #61afab, #cc689f);
+        border-radius: 20px;
+        padding: 0px 10px;
+        line-height: 1.7rem;
+        transition: padding 0.5s linear;
+        color: #a00815;
+}
+.menuItem{
+  color: white;
+  padding: 0 10px;
+  background: #bfcbd0ad;
+  border-radius: inherit;
+  height: 100%;
+  position: relative;
+}
+
+#coverflow-img{
+  width: 90%;
+  height: 80%;
+  margin-left: 5px;
+  margin-top: 25px;
+}
+
+#settings-img{
+  margin-left: 25%;
+  margin-top: 40%;
+  position: absolute;
+}
+/* #rotatable-menu-area{
+  width: 80%;
+  height: 80%;
+  position: relative;
+  top: 9%;
+  margin: auto;
+  background-color: white;
+  border-radius: 50%;
+} */
+
+#menu-btn{
+    position: absolute;
+    top: 15px;
+    outline: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: none;
+}
+#left-btn{
+  position: absolute;
+  font-size: 1.5rem;
+	justify-content: center;
+	align-items: center;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  left: 1.5%;
+}
+#right-btn{
+    position: absolute;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    right: 1.5%;
+}
+#pause-btn{
+  position: absolute;
+  font-size: 1.5rem;
+	justify-content: center;
+	align-items: center;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  bottom: 15px;
+}
+
+
+/*Game Screen */
+#gameGif{
+  width: 100%;
+  margin-top: 15px;
+  height: 90%;
+  border-radius: inherit;
+}
+
+/* Infinite rotating */
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.rotating {
+  animation: rotating 8s linear infinite alternate;
+}
+
+
+
+
+/* Media Queries for responsiveness*/
+
+@media only screen and (max-width: 1000px)
+{
+  .main-container {
+    width: 30%;
+  }
+}
+@media only screen and (max-width: 800px)
+{
+  .main-container {
+    width: 40%;
+  }
+}
+@media only screen and (max-width: 600px)
+{
+  .main-container {
+    width: 60%;
+  }
+}
+
+@media only screen and (max-width: 400px)
+{
+  .main-container {
+    width: 90%;
+  }
+}
