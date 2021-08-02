@@ -1,7 +1,6 @@
 import React from 'react';
 import Menu from './Menu';
 import Game from './Game';
-import Music from './Music';
 import CoverFlow from './CoverFlow';
 import Settings from './Settings';
 import Artists from './Artists';

@@ -16,5 +16,3 @@ const Wheel = (props) => {
 
 export default Wheel;
 
-{/* <script src="https://kit.fontawesome.com/1e28e246ae.js" crossorigin="anonymous"></script> */}
-

@@ -8,6 +8,7 @@ class Items extends React.Component{
         return(
                 <div id ="item">
                     {
+                        // Prepare menu items 
                         menuOptions.map((item,i) => {
                             return(
                                 <div className = {this.props.selectedItem === i ? 'selected' : ''}>

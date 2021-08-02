@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import Wheel from './Wheel';
 import './App.css';
 import Screen from './Screen';
@@ -22,6 +21,7 @@ class App extends React.Component{
     }
   }
   componentDidMount(){
+    // use zingTouch to calculate distance rotated in the wheel
     var region = new ZingTouch.Region(document.getElementById('wheel-container'));
     region.bind(document.getElementById('wheel-container'),'rotate',(e) =>{
       let distLast = e.detail.distanceFromLast;
@@ -47,7 +47,7 @@ class App extends React.Component{
     });
   }
 
-
+ // when inner-area of wheel is clicked , handle the click event 
   handleOnItemSelection = () =>{
     if(document.getElementById('menu').classList.contains('display-none'))
     {
@@ -61,6 +61,8 @@ class App extends React.Component{
         isOnMusicPanel:true,
         selected : 0
       });
+      // when music menu panel is visible deafult the selected item to 0
+      this.selectedItem=0;
     }
     else
     {
@@ -71,31 +73,31 @@ class App extends React.Component{
     }
   }
 
+  // toggle-menu to display/hide the menu panel
   toggleMenu = () => {
     $('#menu').toggleClass('display-none');
+    // each time set the default value to 0 such that it points to first item
     this.selectedItem=0;
   }
 
-
+  // when menu button is clicked , handle the click event 
   handleMenuButtonClick = () => {
-    //$('#menu').toggleClass('display-none');
     this.toggleMenu();
     this.setState({
       screenPanel : -1
     });
   }
 
+  // when previous button is clicked , handle the click event 
   handlePreviousButtonClick = () =>{
-    
-    if(this.state.isOnMusicPanel == true && (document.getElementById('menu').classList.contains('display-none')))
+    if(this.state.isOnMusicPanel === true && (document.getElementById('menu').classList.contains('display-none')))
     {
       this.setState({
-        options:['All Songs','Artists','Albumns'],
+        options:['All Songs','Artists','Albums'],
         screenPanel : -1,
         isOnMusicPanel:true,
         selected : 0
       });
-      //$('#menu').toggleClass('display-none');
       this.toggleMenu();
       return;
     }
@@ -105,18 +107,16 @@ class App extends React.Component{
       selected : 0,
       screenPanel : -1,
       isOnMusicPanel:false,
-      songs_menu:['All Songs','Artists','Albumns']
+      songs_menu:['All Songs','Artists','Albums']
     });
 
-    if(this.state.isOnMusicPanel == true && !(document.getElementById('menu').classList.contains('display-none')))
+    if(this.state.isOnMusicPanel === true && !(document.getElementById('menu').classList.contains('display-none')))
     {
       return;
     }
+
     this.toggleMenu();
-    //$('#menu').toggleClass('display-none');
   }
-
-
 
   render(){
     return(

@@ -13,6 +13,7 @@ class Menu extends React.Component{
                 <Items
                  menuOptions = {this.props.menuOptions}
                  selectedItem = {selectedMenuIndex}/>
+                 {this.props.menuOptions.length === 3 ? <div id = "goBack" className="changeTextColor"> Press <i className="fas fa-backward"></i> to go back.</div> : ''}
             </div>
         )
     }
