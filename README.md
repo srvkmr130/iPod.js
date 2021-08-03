@@ -1,5 +1,5 @@
 
-# Get the project in live in action 
+# Get the project live in action 
 For live demo : https://srvkmr130.github.io/iPod.js/
 
 
